@@ -1,0 +1,204 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: #008080;
+    font-family: Tahoma, Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.desktop {
+    position: fixed;
+    inset: 0;
+    padding: 20px;
+    background: #008080;
+}
+
+.icon {
+    width: 75px;
+    color: white;
+    text-align: center;
+    font-size: 12px;
+    margin-bottom: 25px;
+    text-shadow: 1px 1px black;
+}
+
+.icon span {
+    font-size: 35px;
+    display: block;
+}
+
+.window {
+    width: 340px;
+    max-width: 95vw;
+    background: #c0c0c0;
+    border: 3px solid;
+    border-color: white #404040 #404040 white;
+    box-shadow: 3px 3px 0 #222;
+    padding: 4px;
+    position: relative;
+}
+
+.titlebar {
+    background: linear-gradient(90deg, #000080, #1084d0);
+    color: white;
+    height: 27px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3px 5px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.close {
+    background: #c0c0c0;
+    color: black;
+    border: 2px outset white;
+    width: 22px;
+    height: 21px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.menu {
+    font-size: 12px;
+    padding: 8px 3px;
+    word-spacing: 12px;
+}
+
+.display {
+    width: 100%;
+    height: 65px;
+    background: #9bbc0f;
+    border: 3px inset #888;
+    color: #172900;
+    font-family: "Courier New", monospace;
+    font-size: 29px;
+    text-align: right;
+    padding: 10px;
+    margin-bottom: 10px;
+    outline: none;
+}
+
+.status {
+    font-size: 10px;
+    color: #333;
+    margin-bottom: 7px;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+}
+
+button.key {
+    height: 48px;
+    background: #c0c0c0;
+    border: 3px outset white;
+    font-size: 19px;
+    font-weight: bold;
+    cursor: pointer;
+    color: black;
+}
+
+button.key:active {
+    border-style: inset;
+    background: #aaa;
+}
+
+button.operator {
+    color: navy;
+    background: #d5d5d5;
+}
+
+button.equal {
+    background: #000080;
+    color: white;
+}
+
+button.clear {
+    background: #d00000;
+    color: white;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    font-size: 10px;
+    margin-top: 9px;
+    color: #444;
+}
+
+.taskbar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 37px;
+    background: #c0c0c0;
+    border-top: 3px solid white;
+    display: flex;
+    align-items: center;
+    padding: 4px;
+    gap: 8px;
+}
+
+.start {
+    border: 3px outset white;
+    background: #c0c0c0;
+    font-weight: bold;
+    padding: 4px 10px;
+}
+
+.clock {
+    margin-left: auto;
+    border: 2px inset white;
+    padding: 5px 12px;
+    font-size: 12px;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    width: 280px;
+    background: #c0c0c0;
+    border: 3px outset white;
+    padding: 5px;
+    box-shadow: 3px 3px black;
+}
+
+.popup-title {
+    background: navy;
+    color: white;
+    padding: 5px;
+    font-size: 12px;
+}
+
+.popup-content {
+    padding: 15px 5px;
+    font-size: 13px;
+}
+
+.popup button {
+    display: block;
+    margin: auto;
+    padding: 5px 25px;
+    border: 3px outset white;
+    background: #c0c0c0;
+}
+
+@media(max-width:400px) {
+    .window {
+        width: 320px;
+    }
+}
